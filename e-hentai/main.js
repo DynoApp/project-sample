@@ -1,4 +1,9 @@
 export default {
+  id: 'moe.impl.dyno.e-hentai',
+  name: 'e-hentai',
+  version: '0.1',
+  author: 'plutonist',
+  
   async alpha (posts, url = 'https://e-hentai.org/', jump) {
     if (jump) {
       posts = []
