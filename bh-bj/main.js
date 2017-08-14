@@ -1,4 +1,9 @@
 export default {
+  id: 'moe.impl.dyno.bh-bj',
+  name: 'bh-bj',
+  version: '0.1',
+  author: 'plutonist',
+  
   async alpha (posts, url = 'http://www.wlzz.org/') {
     const $ = await url.get().cheer()
     $('article').each(function() {
