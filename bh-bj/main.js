@@ -4,7 +4,7 @@ export default {
   version: '0.1',
   author: 'plutonist',
   
-  async alpha (posts, url = 'http://www.wlzz.org/') {
+  async alpha (posts, url = 'http://www.wlzz.org/category/fuliba') {
     const $ = await url.get().cheer()
     $('article').each(function() {
       posts.push({
