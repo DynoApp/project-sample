@@ -1,4 +1,9 @@
 export default {
+  id: 'moe.impl.dyno.lolibooru',
+  name: 'lolibooru',
+  version: '0.1',
+  author: 'plutonist',
+  
   async alpha(posts, url = 'https://lolibooru.moe/pool') {
     const raw = await url.get().raw()
     const covers = raw.match(/Preload.preload\('.*'\);/g).map(l => l.match(/Preload.preload\('(.*)'\);/)[1])
