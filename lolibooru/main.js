@@ -8,9 +8,9 @@ export default {
     const raw = await url.get().raw()
     const covers = raw.match(/Preload.preload\('.*'\);/g).map(l => l.match(/Preload.preload\('(.*)'\);/)[1])
     const $ = raw.cheer()
-    const rs = $('.even').map((i, el) => ({
+    const rs = $('table.highlightable tbody tr').map((i, el) => ({
       title: $(el).find('a').text(),
-      cover: covers[i * 2],
+      cover: covers[i],
       by: $(el).find('td').eq(1).text(),
       date: $(el).find('td').eq(3).text(),
       url: $(el).find('a').attr('href').relativeTo(url)
