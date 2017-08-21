@@ -4,6 +4,9 @@ export default {
   version: '0.1',
   author: 'plutonist',
   
+  async search (posts, keyword, url = `https://e-hentai.org/?f_search=${keyword}`, jump) {
+    return await this.alpha(posts, url, jump)
+  },
   async alpha (posts, url = 'https://e-hentai.org/', jump) {
     if (jump) {
       posts = []
